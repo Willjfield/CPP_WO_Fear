@@ -2,10 +2,10 @@
 
 using namespace std;
 
-bool q = false;
 
 int main(){
 	
+	bool q = false;
 	int total, n;
 	int subLimit;
 	while(q==false){	
@@ -14,7 +14,7 @@ int main(){
 			cin >> total;
 				if(total==0){
 					q=true;
-					break;
+					return 0;
 				}
 				else if(total>0){
 					break;
@@ -30,7 +30,7 @@ int main(){
 				
 				if(subLimit==0){
 					q=true;
-					break;
+					return 0;
 				}
 		}
 
@@ -53,7 +53,7 @@ int main(){
 			
 			if(total=='q'){
 				q=true;
-				break;
+				return 0;
 			}
 			while(n<1 || n > subLimit){
 				cout << "Input must be in range." << endl;
@@ -62,6 +62,7 @@ int main(){
 				
 				if(total=='q'){
 					q=true;
+					return 0;
 				}
 			}
 			total = total-n;
